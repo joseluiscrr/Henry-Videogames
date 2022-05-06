@@ -1,0 +1,43 @@
+.containerForm{
+    position: absolute;
+    top: 188px;
+    left: 0;
+    right: 0;
+    height: 800px;
+}
+.buttonArea{
+    margin-left: 15px;
+}
+.infoInput{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 330px;
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 151px;
+}
+.descriptionBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+}
+.genresInput{
+    position: absolute;
+    left: 40px;
+    right: 0;
+    top: 375px;
+}
+.platformsInput{
+    position: absolute;
+    left: 40px;
+    right: 0;
+    top: 575px;
+}
