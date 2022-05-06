@@ -8,14 +8,14 @@ import { ThemeProvider } from "styled-components";
 import "./App.css";
 
 function App() {
-  return(
+  return (
     <>
       <ThemeProvider theme={theme}>
         <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/home" component={Home} />
-          <Route path="/home/:id" component={Detail} />
-          <Route path="/create" component={Form} />
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/home' component={Home} />
+          <Route path='/home/:id' component={Detail} />
+          <Route path='/create' component={Form} />
           <Route component={Error} />
         </Switch>
       </ThemeProvider>
@@ -24,7 +24,7 @@ function App() {
 };
 
 const theme = {
-  glassWhite: '#8080801c',
+  glassBlack: '#8080801c',
   glassTransparent: 'rgba(255, 255, 255, 0.35)',
   glassBorder: '1px solid rgb(255 255 255 / 0%)',
   darkBorder: '1px solid rgb(255 255 255 / 50%)',

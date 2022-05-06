@@ -1,6 +1,6 @@
-import React from 'react';
-import onit from '../images/onit.gif';
-import style from 'styled-components';
+import React from "react";
+import onit from "../images/onit.gif";
+import styled from "styled-components";
 
 const Load = () => {
     return (
@@ -11,7 +11,7 @@ const Load = () => {
     )
 }
 
-const Div = style.div`
+const Div = styled.div`
     display: grid;
     grid-template-rows: 10em 1fr;
     grid-template-columns: 1fr;
@@ -19,7 +19,7 @@ const Div = style.div`
     align-items: center;
 `;
 
-const Img = style.img`
+const Img = styled.img`
     margin-left: 40px;
 `;
 

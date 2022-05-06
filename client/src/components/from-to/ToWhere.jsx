@@ -1,11 +1,11 @@
 import React from "react";
 import Buttons from "../styles/buttons";
 import { Link } from "react-router-dom";
-import style from "styled-components";
+import styled from "styled-components";
 
 const ToWhere = ({ to, inner }) => {
     return (
-        <Button as="div">
+        <Button as='div'>
             <Link to={to}>
                 <Buttons>{inner}</Buttons>
             </Link>
@@ -13,7 +13,7 @@ const ToWhere = ({ to, inner }) => {
     );
 };
 
-const Button = style.button`
+const Button = styled.button`
     display: inline-block;
 `;
 

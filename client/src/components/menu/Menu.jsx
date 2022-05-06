@@ -7,7 +7,7 @@ import Genre from "./div/Genre";
 import Clear from "./div/Clear";
 import Owns from "./div/Owns"
 import Buttons from "../styles/buttons";
-import style from "styled-components";
+import styled from "styled-components";
 import "../css/menu.css";
 
 const Menu = () => {
@@ -31,27 +31,27 @@ const Menu = () => {
             }
             <Nav ref={reference} className={`menu ${bool && 'active'}`}>
                 <ul>
-                    <div className="resultsClear"><h3>Result: {games.length}</h3><Owns /></div>
+                    <div className='resultsClear'><h3>Result: {games.length}</h3><Owns /></div>
                     <li>
                         <Sort 
-                            innerLeft={"Desc"}
-                            innerRight={"Asc"}
+                            innerLeft={'Desc'}
+                            innerRight={'Asc'}
                             actionLeft={sortName}
                             actionRight={sortName}
                             argLeft={1}
                             argRight={-1}
-                            title={"Name"}
+                            title={'Name'}
                         />
                     </li>
                     <li>
                         <Sort
-                            innerLeft={"Desc"}
-                            innerRight={"Asc"}
+                            innerLeft={'Desc'}
+                            innerRight={'Asc'}
                             actionLeft={sortRating}
                             actionRight={sortRating}
                             argLeft={-1}
                             argRight={1}
-                            title={"Score"}
+                            title={'Score'}
                         />
                     </li>
                     <li><Genre /></li>
@@ -62,14 +62,14 @@ const Menu = () => {
     );
 };
 
-const Buttons1 = style(Buttons)`
+const Buttons1 = styled(Buttons)`
     position: absolute;
     top: 23.8%;
     right: 20%;
     span { font-weight: 700; font-size: 14px; margin: 10px; }
 `;
 
-const Nav = style.nav`
+const Nav = styled.nav`
     position: absolute;
     top: 33%;
     right: 12%;
@@ -89,7 +89,7 @@ const Nav = style.nav`
     li { border-top: 1px solid grey; button{border: ${props => props.theme.darkBorder}} }
 `;
 
-const Li = style.li`
+const Li = styled.li`
     display: flex;
     justify-content: center;
 `;

@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const Sequelize = require('sequelize');
-const { Videogame, Genre } = require('../../db');
+const router = require("express").Router();
+const Sequelize = require("sequelize");
+const { Videogame, Genre } = require("../../db");
 const Op = Sequelize.Op;
 
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
     const { name, genres, description, released, rating, platforms } = req.body;
     if(!name || !description) return res.status(422).json({ message: 'Name and Description required' });
     if(rating < 0 || rating > 5) return res.status(422).json({ message: 'Rating must be between 0 or 5' });

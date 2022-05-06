@@ -1,6 +1,6 @@
 import React from "react";
 import start from "../images/start.png";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Start = () => {
     return (
@@ -11,23 +11,23 @@ const Start = () => {
     );
 };
 
-const Div = style.div`
+const Div = styled.div`
     height: 30em;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
-    grid-template-areas: "title" "cartoon";
+    grid-template-areas: 'title' 'cartoon';
 `;
 
-const H1 = style.h1`
+const H1 = styled.h1`
     display: inline-block;
     grid-area: title;
     width: fit-content;
     margin: auto;
 `;
 
-const Img = style.img`
+const Img = styled.img`
     height: 25em;
     grid-area: cartoon;
     margin: auto;

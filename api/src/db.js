@@ -1,7 +1,7 @@
-require('dotenv').config();
-const { Sequelize } = require('sequelize');
-const fs = require('fs');
-const path = require('path');
+require("dotenv").config();
+const { Sequelize } = require("sequelize");
+const fs = require("fs");
+const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`, {
@@ -26,8 +26,8 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const { Videogame, Genre } = sequelize.models;
 
-Videogame.belongsToMany(Genre, { through: "genregame" });
-Genre.belongsToMany(Videogame, { through: "genregame" });
+Videogame.belongsToMany(Genre, { through: 'genregame' });
+Genre.belongsToMany(Videogame, { through: 'genregame' });
 
 module.exports = {
   ...sequelize.models,

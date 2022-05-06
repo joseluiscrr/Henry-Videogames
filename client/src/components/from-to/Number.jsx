@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "../styles/input";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Number = ({ type, value, change, name }) => {
     return (
@@ -10,15 +10,15 @@ const Number = ({ type, value, change, name }) => {
             value={value}
             color={value}
             onChange={change}
-            min={0} max={5} step="0.1"
-            placeholder={ name === "released" ? "" : "0" }
+            min={0} max={5} step='0.1'
+            placeholder={ name === 'released' ? '' : '0' }
         />
     );
 };
 
-const Input1 = style(Input)`
+const Input1 = styled(Input)`
     padding: -10px -20px;
-    width: ${(props) => props.name === "released" ? "130px" : "3rem"};
+    width: ${(props) => props.name === 'released' ? '130px' : '3rem'};
     font-size: 18px;
     height: 4rem;
     margin: 0;

@@ -2,7 +2,7 @@ import React from "react";
 import HistoryDispatch from "../../hooks/HistoryDispatch";
 import { filterGenre, setReference } from "../../../redux/actions";
 import PropTypes from "prop-types"
-import style from "styled-components";
+import styled from "styled-components";
 
 const Filter = ({ genre }) => {
     const [history, dispatch] = HistoryDispatch();
@@ -19,9 +19,9 @@ Filter.protoTypes = {
     genre: PropTypes.string.isRequired
 };
 
-const Button = style.button`
+const Button = styled.button`
     border-radius: ${(props) => props.theme.glassBorderRadius};
-    background: ${(props) => props.theme.glassWhite};
+    background: ${(props) => props.theme.glassBlack};
     border: ${(props) => props.theme.darkBorder};
     margin: 0.5rem;
     padding: 0.25em 1em;

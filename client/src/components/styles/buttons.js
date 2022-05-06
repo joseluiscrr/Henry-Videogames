@@ -1,11 +1,11 @@
-import style from "styled-components";
+import styled from "styled-components";
 
-let Buttons = style.button`
+let Buttons = styled.button`
     display: inline-block;
     font-size: 1em;
     border-radius: ${props => props.theme.glassBorderRadius};
     border: ${props => props.theme.glassBorder};
-    background: ${props => props.theme.glassWhite};
+    background: ${props => props.theme.glassBlack};
     height: 3em;
     width: max-content;
     margin: 0px;

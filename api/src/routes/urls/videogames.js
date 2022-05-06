@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const { getApiGames, getBaseGames, allGames, apiQuery, apiId, baseId } = require("../constants/videogames");
+const { allGames, apiQuery, apiId, baseId } = require("../constants/videogames");
 
-router.get("/", async function(req, res) {
+router.get('/', async function(req, res) {
     const name = req.query.name
     if(name) {
         let reference = await apiQuery(name);
@@ -13,7 +13,7 @@ router.get("/", async function(req, res) {
     };
 });
 
-router.get("/:id", async function(req, res) {
+router.get('/:id', async function(req, res) {
     const id = req.params.id;
     if(id.length === 36) {
         const base = await baseId(id);

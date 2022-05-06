@@ -1,6 +1,6 @@
 import React from "react";
 import Template from "../../from-to/Template";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Sort = ({ innerLeft, innerRight, actionLeft, actionRight, argLeft, argRight, title }) => {
     return (
@@ -12,7 +12,7 @@ const Sort = ({ innerLeft, innerRight, actionLeft, actionRight, argLeft, argRigh
     );
 };
 
-const Div = style.div`
+const Div = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 10px;

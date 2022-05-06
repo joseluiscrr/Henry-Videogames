@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router';
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 
 const HistoryDispatch = () => {
     const dispatch = useDispatch();

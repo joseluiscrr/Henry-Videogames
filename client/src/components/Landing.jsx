@@ -2,15 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Head from "./styles/head";
 import Buttons from "./styles/buttons";
-import style from "styled-components";
-import './css/landing.css'
+import styled from "styled-components";
+import "./css/landing.css"
 
 const Landing = () => {
   return (
     <div className='landing'>
       <Head1>
         <h1>Videogames</h1>
-        <Link to="/home">
+        <Link to='/home'>
           <Buttons1>
             <h4>Start</h4>
           </Buttons1>
@@ -20,14 +20,14 @@ const Landing = () => {
   );
 };
 
-const Head1 = style(Head)`
+const Head1 = styled(Head)`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 `;
 
-const Buttons1 = style(Buttons)`
+const Buttons1 = styled(Buttons)`
   height: 9rem;
   color: white;
   position: absolute;

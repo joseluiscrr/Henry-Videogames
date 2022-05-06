@@ -3,7 +3,7 @@ import notImage from "../images/NotImage.jpeg"
 import { Link } from "react-router-dom";
 import Dynamic from "../styles/dynamic";
 // import PropTypes from "prop-types";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Game = ({ id, image, name, genres, rating }) => {
     return (
@@ -34,7 +34,7 @@ const Game = ({ id, image, name, genres, rating }) => {
 //     rating: PropTypes.string.isRequired
 // };
 
-let Div = style.div`
+let Div = styled.div`
     background: ${(props) => `url(${props.image})center / cover`};
     a { text-decoration: none; }
     overflow: hidden;
@@ -49,7 +49,7 @@ let Div = style.div`
     &:hover { box-shadow: 0px 0px 35px 5px #ffffff78; }
 `;
 
-const Div2 = style.div`
+const Div2 = styled.div`
     background: #000000e0;
     position: relative;
     top: 74%;
@@ -67,7 +67,7 @@ const Div2 = style.div`
     height: 13rem;
 `;
     
-const Div3 = style.div`
+const Div3 = styled.div`
     display: flex;
 `;
 

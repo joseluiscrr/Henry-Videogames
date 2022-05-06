@@ -1,6 +1,6 @@
-import React from 'react';
-import HistoryDispatch from '../hooks/HistoryDispatch';
-import Buttons from '../styles/buttons';
+import React from "react";
+import HistoryDispatch from "../hooks/HistoryDispatch";
+import Buttons from "../styles/buttons";
 
 const Template = ({ action, arg, inner }) => {
     const [history, dispatch] = HistoryDispatch();

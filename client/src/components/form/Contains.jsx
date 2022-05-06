@@ -4,7 +4,7 @@ import Buttons from "../styles/buttons";
 import Input from "../styles/input";
 import Number from "../from-to/Number";
 import ToWhere from "../from-to/ToWhere";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Contains = ({ handleSubmit, handleSubmissionChange, checkboxGenres, checkboxPlatforms, danger, submission, genresLoaded, platformsLoaded }) => {
   return (
@@ -12,58 +12,58 @@ const Contains = ({ handleSubmit, handleSubmissionChange, checkboxGenres, checkb
       <Head>
         <h1>Submit your own game!</h1>
       </Head>
-      <form className="containerForm" onSubmit={handleSubmit}>
-        <div className="buttonArea">
-          <Buttons type="submit">Submit</Buttons>
-          <ToWhere to="/home" inner="Go home" />
+      <form className='containerForm' onSubmit={handleSubmit}>
+        <div className='buttonArea'>
+          <Buttons type='submit'>Submit</Buttons>
+          <ToWhere to='/home' inner='Go home' />
         </div>
-        <div className="infoInput">
-          <div className="top">
+        <div className='infoInput'>
+          <div className='top'>
             <Title 
-              danger={danger && "red"}
-              placeholder={danger ? "A title is required" : "Title *"}
-              name="name"
+              danger={danger && 'red'}
+              placeholder={danger ? 'A title is required' : 'Title *'}
+              name='name'
               value={submission.name}
               onChange={handleSubmissionChange}
             />
             <Rating>
               <label>rating</label>
               <Number
-                type="number"
+                type='number'
                 change={handleSubmissionChange}
                 value={submission.rating}
-                name="rating"
+                name='rating'
               />
             </Rating>
             <Released>
               <label>released</label>
               <Number
-                type="date"
+                type='date'
                 change={handleSubmissionChange}
                 value={submission.released}
-                name="released"
+                name='released'
               />
             </Released>
           </div>
-          <div className="descriptionBox">
+          <div className='descriptionBox'>
             <Description
-              as="textarea"
-              danger={danger && "red"}
-              type="text"
-              placeholder={danger ? "A description is required" : "description *"}
-              name="description"
+              as='textarea'
+              danger={danger && 'red'}
+              type='text'
+              placeholder={danger ? 'A description is required' : 'description *'}
+              name='description'
               value={submission.description}
               onChange={handleSubmissionChange}
             />
           </div>
         </div>
-        <div className="genresInput">
+        <div className='genresInput'>
           {
             genresLoaded.map((r, index) => (
               <Block key={index}>
                 <input 
                   id={index}
-                  type="checkbox"
+                  type='checkbox'
                   name={r}
                   value={r}
                   onChange={checkboxGenres}
@@ -73,13 +73,13 @@ const Contains = ({ handleSubmit, handleSubmissionChange, checkboxGenres, checkb
             ))
           }
         </div>
-        <div className="platformsInput">
+        <div className='platformsInput'>
           {
             platformsLoaded.map((r, index) => (
               <Block key={index}>
                 <input 
                   id={index}
-                  type="checkbox"
+                  type='checkbox'
                   name={r}
                   value={r}
                   onChange={checkboxPlatforms}
@@ -94,11 +94,11 @@ const Contains = ({ handleSubmit, handleSubmissionChange, checkboxGenres, checkb
   );
 };
 
-const Block = style.div`
+const Block = styled.div`
   padding: 12px;
   display: inline-block;
   border: 1px solid black;
-  background: ${(props) => props.theme.glassWhite};
+  background: ${(props) => props.theme.glassBlack};
   position: relative;
   transition: box-shadow 0.2s ease;
   &:hover { box-shadow: ${(props) => props.theme.hoverShadow}; }
@@ -107,7 +107,7 @@ const Block = style.div`
   width: 230.5px;
 `;
 
-const Title = style(Input).attrs((props) => ({ type: "text" }))`
+const Title = styled(Input).attrs((props) => ({ type: 'text' }))`
   font-weight: 700;
   font-size: 27px;
   margin: 20px;
@@ -119,8 +119,8 @@ const Title = style(Input).attrs((props) => ({ type: "text" }))`
   ::placeholder { font-size: 27px; color: white; }
 `;
 
-const Description = style(Input)`
-  font-family: "Helvetica Neue",serif;
+const Description = styled(Input)`
+  font-family: 'Helvetica Neue', serif;
   resize: none;
   margin: 20px;
   padding: 10px;
@@ -132,7 +132,7 @@ const Description = style(Input)`
   color: white;
 `;
 
-const Rating = style.div`
+const Rating = styled.div`
   color: white;
   width: 70px;
   position: absolute;
@@ -140,7 +140,7 @@ const Rating = style.div`
   right: 340px;
 `;
 
-const Released = style.div`
+const Released = styled.div`
   color: white;
   width: 135px;
   position: absolute;

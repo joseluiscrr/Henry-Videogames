@@ -9,10 +9,10 @@ function Click(reference, initialState) {
             }
         };
         if(bool) {
-            window.addEventListener("click", pageClickEvent);
+            window.addEventListener('click', pageClickEvent);
         };
         return () => {
-            window.removeEventListener("click", pageClickEvent);
+            window.removeEventListener('click', pageClickEvent);
         };
     }, [bool, reference]);
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Buttons from "../styles/buttons";
 import { getQuery, setLoading, setPageReference, setReference } from "../../redux/actions";
-import style from "styled-components";
+import styled from "styled-components";
 
 const SearchBar = () => {
     const dispatch = useDispatch();
@@ -24,31 +24,31 @@ const SearchBar = () => {
             <form onSubmit={handleSubmit}>
                 <Buttons1 
                     as='input'
-                    name="input"
-                    type="text"
-                    placeholder="Search games"
+                    name='input'
+                    type='text'
+                    placeholder='Search games'
                     value={input}
                     onChange={handleInput}
                 />
-                <Input type="submit" tabindex="-1" />
+                <Input type='submit' tabindex='-1' />
             </form>
         </Div>
     );
 };
 
-let Div = style.div`
+let Div = styled.div`
     display: flex;
     justify-content: center;
     form { width: 20%; }  
 `;
 
-let Buttons1 = style(Buttons)`
+let Buttons1 = styled(Buttons)`
     outline: none;
     padding: 0.25em 1em;
     width: 100%;
 `;
 
-let Input = style.input`
+let Input = styled.input`
     position: absolute;
     left: -9999px;
     width: 1px;

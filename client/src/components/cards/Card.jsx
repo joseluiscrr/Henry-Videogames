@@ -5,7 +5,7 @@ import Paginated from "../from-to/Paginated";
 import Menu from "../menu/Menu";
 import NoFilter from "./NoFilter";
 import NoSearch from "./NoSearch";
-import style from "styled-components";
+import styled from "styled-components";
 
 const Card = () => {
     const loading = useSelector((state) => state.loading);
@@ -14,8 +14,6 @@ const Card = () => {
     let index = page * 15;
     let end = index + 15;
     let results = (games === [] || !Array.isArray(games) ? [] : games.slice(index, end));
-
-    // console.log(games);
 
     return (
         <>
@@ -45,7 +43,7 @@ const Card = () => {
     );
 };
 
-const Div = style.div`
+const Div = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto-fit, 1fr);

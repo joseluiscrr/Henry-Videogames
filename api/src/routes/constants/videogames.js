@@ -92,7 +92,7 @@ async function baseId(id) {
     const base = await Videogame.findByPk(id, {
         include: {
             model: Genre,
-            attributes: ["name"],
+            attributes: ['name'],
             through: {
                 attributes: [],
             }

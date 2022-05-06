@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Buttons from "../styles/buttons";
-import style from "styled-components";
+import styled from "styled-components";
 
 const ToHome = ({ top }) => {
     return(
@@ -11,7 +11,7 @@ const ToHome = ({ top }) => {
     );
 };
 
-const Buttons1 = style(Buttons)`
+const Buttons1 = styled(Buttons)`
     position: absolute;
     top: ${props => props.top || '4%'};
     right: 7%;

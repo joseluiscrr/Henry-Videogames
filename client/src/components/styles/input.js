@@ -1,6 +1,6 @@
-import style from "styled-components";
+import styled from "styled-components";
 
-const Input = style.input`
+const Input = styled.input`
     background: rgba(255, 255, 255, 0.25);
     outline: none;
     border-style: solid;
@@ -11,7 +11,7 @@ const Input = style.input`
     width: 29em;
     padding-left: 15px;
     margin: 1em;
-    ::placeholder { font-size: 17px; color: ${(props) => props.danger && "#FF7474"}; color: white; }
+    ::placeholder { font-size: 17px; color: ${(props) => props.danger && '#FF7474'}; color: white; }
 `;
 
 export default Input;

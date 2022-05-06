@@ -1,6 +1,6 @@
-import style from "styled-components";
+import styled from "styled-components";
 
-const Center = style.div`
+const Center = styled.div`
     display: flex;
     justify-content: space-around;
     margin: 0;

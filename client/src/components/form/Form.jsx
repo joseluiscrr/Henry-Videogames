@@ -10,7 +10,7 @@ const Form = () => {
     const dispatch = useDispatch();
     const genresLoaded = useGenre();
     const platformsLoaded = useSelector((state) => state.platformsLoaded);
-    const initialState = { name: "", description: "", rating: "", released: "", genres: [], platforms: [] };
+    const initialState = { name: '', description: '', rating: '', released: '', genres: [], platforms: [] };
     const [ done, setDone ] = useState(false);
     const [ danger, setDanger ] = useState(false);
     const [ submission, setSubmission ] = useState({ ...initialState });
@@ -33,7 +33,7 @@ const Form = () => {
 
     const handleSubmit = (r) => {
         r.preventDefault();
-        if(submission.name === "" || submission.description === "") return setDanger(true);
+        if(submission.name === '' || submission.description === '') return setDanger(true);
         Object.entries(genresList).map((r) => r[1] && submission.genres.push(r[0]));
         Object.entries(platformsList).map((r) => r[1] && submission.platforms.push(r[0]));
         dispatch(postGame(submission));

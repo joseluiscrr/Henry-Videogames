@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import Start from "./Start";
 import Card from "../cards/Card";
 import Load from "./Load";
-import style from "styled-components";
+import styled from "styled-components";
 import { getGames } from "../../redux/actions";
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
     );
 };
 
-let Div = style.div`
+let Div = styled.div`
     display: table;
     width: 100%;
     overflow-y: scroll;
@@ -43,7 +43,7 @@ let Div = style.div`
     min-height: 45em;
 `;
 
-let Div2 = style.div`
+let Div2 = styled.div`
     position: absolute;
     top: 24%;
     left: 20%;

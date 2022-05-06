@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from '../styles/head';
-import Clear from '../menu/div/Clear';
+import React from "react";
+import Head from "../styles/head";
+import Clear from "../menu/div/Clear";
 
 const NoFilter = () => {
     return(

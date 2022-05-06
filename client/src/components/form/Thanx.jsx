@@ -11,7 +11,7 @@ const Thanx = ({ setDone }) => {
                 <h1>Thanks for submitting</h1>
                 <Center>
                     <Buttons onClick={() => setDone(false)}>Submit another game</Buttons>
-                    <ToWhere to="/home" inner="go home" />
+                    <ToWhere to='/home' inner='Go home' />
                 </Center>
             </Head>
         </>
