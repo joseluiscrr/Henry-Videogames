@@ -1,13 +1,10 @@
 import React from "react";
 import ToHome from "../from-to/ToHome";
-// import Buttons from "../styles/buttons";
-// import Description from "./Description";
-// import ProptTypes from "prop-types";
+import Dynamic from "../styles/dynamic";
 import styled from "styled-components";
 import "../css/details.css";
-import Dynamic from "../styles/dynamic";
 
-const Details = ({ image, name, genres, description, released, rating, platforms }) => {
+const Details = ({ id, image, name, genres, description, released, rating, platforms }) => {
     
     return(
         <>

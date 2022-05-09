@@ -2,7 +2,6 @@ import React from "react";
 import notImage from "../images/NotImage.jpeg"
 import { Link } from "react-router-dom";
 import Dynamic from "../styles/dynamic";
-// import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Game = ({ id, image, name, genres, rating }) => {
@@ -20,19 +19,6 @@ const Game = ({ id, image, name, genres, rating }) => {
         </Div>
     );
 };
-
-// Game.defaultProps = {
-//     genres: [],
-//     rating: '0'
-// };
-
-// Game.propTypes = {
-//     id: PropTypes.any.isRequired,
-//     image: PropTypes.any.isRequired,
-//     name: PropTypes.string.isRequired,
-//     genres: PropTypes.array,
-//     rating: PropTypes.string.isRequired
-// };
 
 let Div = styled.div`
     background: ${(props) => `url(${props.image})center / cover`};

@@ -12,6 +12,7 @@ export const FILTER_GENRE = 'FILTER_GENRE';
 export const GET_DETAILS = 'GET_DETAILS';
 export const POST_GAME = 'POST_GAME';
 export const GET_BASE = 'GET_BASE';
+export const DELETE_GAME = 'DELETE_GAME'
 
 export const getGames = () => {
     return async function(dispatch) {
@@ -111,6 +112,16 @@ export const getBase = () => {
         return dispatch({
             type: 'GET_BASE',
             payload: json.data.slice(100)
+        });
+    };
+};
+
+export const deleteGame = (payload) => {
+    return async function(dispatch) {
+        var response = await axios.delete('http://localhost:3001/videogame/', payload);
+        return dispatch({
+            type: 'DELETE_GAME',
+            payload: response.data
         });
     };
 };

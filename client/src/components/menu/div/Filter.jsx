@@ -1,7 +1,6 @@
 import React from "react";
 import HistoryDispatch from "../../hooks/HistoryDispatch";
 import { filterGenre, setReference } from "../../../redux/actions";
-import PropTypes from "prop-types"
 import styled from "styled-components";
 
 const Filter = ({ genre }) => {
@@ -13,10 +12,6 @@ const Filter = ({ genre }) => {
     };
 
     return <Button onClick={filter}>{genre}</Button>;
-};
-
-Filter.protoTypes = {
-    genre: PropTypes.string.isRequired
 };
 
 const Button = styled.button`

@@ -14,4 +14,10 @@ router.post('/', async (req, res) => {
     res.send('Commited game');
 });
 
+router.delete('/:id', async (req, res) => {
+    const id = req.params.id;
+    const game = await Videogame.findAll({ where: {id: id}});
+    game ? Videogame.destroy({ where: {id: id}}) && res.status(200).send('Deleted game') : res.status(422).send('Game not found')
+});
+
 module.exports = router;

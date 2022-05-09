@@ -75,7 +75,7 @@ export function reducer(state = initialState, action) {
           loading: false
         };
       case POST_GAME: 
-        return {...state}
+        return {...state};
       case GET_BASE:
         return {
           ...state,
@@ -84,7 +84,9 @@ export function reducer(state = initialState, action) {
           loading: false,
           pageReference: 0,
           reference: 'Owns'
-        }
+        };
+      // case DELETE_GAME: 
+      //   return {...state};
       default: return state;
   };
 };

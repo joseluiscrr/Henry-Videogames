@@ -22,7 +22,8 @@ const Detail = (props) => {
     if(loading) return <Load />;
     if(name && description) {
         return(
-            <Details 
+            <Details
+                id={id}
                 image={image ? image : notImage}
                 name={name}
                 genres={genres}
