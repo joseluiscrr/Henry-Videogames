@@ -9,11 +9,12 @@ import styled from "styled-components";
 
 const Card = () => {
     const loading = useSelector((state) => state.loading);
-    const games = useSelector((state) => state.gamesLoaded);
+    const games = useSelector((state) => state.gamesLoad);
     const page = useSelector((state) => state.pageReference);
     let index = page * 15;
     let end = index + 15;
     let results = (games === [] || !Array.isArray(games) ? [] : games.slice(index, end));
+    let id = 1;
 
     return (
         <>
@@ -32,7 +33,7 @@ const Card = () => {
                     ) :
                     ( 
                         results.map((r) => (
-                            <Game key={r.id} id={r.id} image={r.image} name={r.name} genres={r.genres} rating={r.rating} />
+                            <Game key={id++} id={r.id} image={r.image} name={r.name} genres={r.genres} rating={r.rating} />
                         ))
                     )
                 }

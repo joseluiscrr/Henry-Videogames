@@ -2,6 +2,7 @@ import { filterGenre, sortName, sortRating } from "./constans"
 import { GET_GAMES, GET_QUERY, GET_GENRES, PAGE_REFERENCE, SET_LOADING, SET_REFERENCE, SORT_NAME, SORT_RATING, FILTER_GENRE, GET_DETAILS, POST_GAME, GET_BASE } from "./actions";
 
 let initialState = {
+  gamesLoad: [],
   gamesLoaded: [],
   detailsLoaded: [],
   genresLoaded: [],
@@ -16,6 +17,7 @@ export function reducer(state = initialState, action) {
     case GET_GAMES:
       return {
         ...state,
+        gamesLoad: action.payload,
         gamesLoaded: action.payload,
         loading: false,
         pageReference: 0,
@@ -24,7 +26,7 @@ export function reducer(state = initialState, action) {
     case GET_QUERY:
       return {
         ...state,
-        gamesLoaded: action.payload,
+        gamesLoad: action.payload,
         loading: true
       };
     case GET_GENRES:
@@ -50,19 +52,19 @@ export function reducer(state = initialState, action) {
     case SORT_NAME: 
       return {
         ...state, 
-        gamesLoaded: sortName(action.payload, state.gamesLoaded),
+        gamesLoad: sortName(action.payload, state.gamesLoad),
         pageReference: 0
       };
     case SORT_RATING:
       return {
         ...state, 
-        gamesLoaded: sortRating(action.payload, state.gamesLoaded),
+        gamesLoad: sortRating(action.payload, state.gamesLoad),
         pageReference: 0
       };
     case FILTER_GENRE: 
       return {
         ...state, 
-        gamesLoaded: filterGenre(action.payload, state.gamesLoaded),
+        gamesLoad: filterGenre(action.payload, state.gamesLoaded),
         pageReference: 0
       };
       case GET_DETAILS:
@@ -76,6 +78,7 @@ export function reducer(state = initialState, action) {
       case GET_BASE:
         return {
           ...state,
+          gamesLoad: action.payload,
           gamesLoaded: action.payload,
           loading: false,
           pageReference: 0,

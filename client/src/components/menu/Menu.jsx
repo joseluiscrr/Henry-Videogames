@@ -14,7 +14,7 @@ const Menu = () => {
     const dispatch = useDispatch();
     const reference = useRef(null);
     const [bool, setBool] = Click(reference, false);
-    const games = useSelector((state) => state.gamesLoaded);
+    const games = useSelector((state) => state.gamesLoad);
     const onClick = async () => {
         setBool(!bool);
         await dispatch(getGenres());

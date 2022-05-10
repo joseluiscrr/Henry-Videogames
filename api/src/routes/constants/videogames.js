@@ -59,7 +59,7 @@ async function apiQuery(name) {
                 genres: r.genres.map(r => r.name).join(', '),
                 released: r.released,
                 rating: r.rating,
-                platforms: r.platforms.map(r => r.platform.name).join(', ')
+                platforms: r.platforms === null ? null : r.platforms.map(r => r.platform.name).join(', ')
             };
             array.push(obj);
         });
