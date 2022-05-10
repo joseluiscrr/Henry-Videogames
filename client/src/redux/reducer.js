@@ -3,8 +3,7 @@ import { GET_GAMES, GET_QUERY, GET_GENRES, PAGE_REFERENCE, SET_LOADING, SET_REFE
 
 let initialState = {
   gamesLoaded: [],
-  gamesUnfiltered: [],
-  gamesDetails: [],
+  detailsLoaded: [],
   genresLoaded: [],
   platformsLoaded: ["PC", "PlayStation 5", "PlayStation 4", "Xbox One", "Xbox Series S/X", "Nintendo Switch", "iOS", "Android", "Nintendo 3DS", "macOS", "Xbox 360", "Xbox", "PlayStation 3", "PlayStation 2", "Wii U", "Nintendo 64", "Game Boy Advance", "Game Boy Color", "Game Boy", "GameCube"],
   loading: false,
@@ -18,7 +17,6 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
         gamesLoaded: action.payload,
-        gamesUnfiltered: action.payload,
         loading: false,
         pageReference: 0,
         reference: ''
@@ -27,7 +25,6 @@ export function reducer(state = initialState, action) {
       return {
         ...state,
         gamesLoaded: action.payload,
-        gamesUnfiltered: action.payload,
         loading: true
       };
     case GET_GENRES:
@@ -36,17 +33,17 @@ export function reducer(state = initialState, action) {
         genresLoaded: action.payload
       };
     case SET_LOADING: 
-      return{
+      return {
         ...state,
         loading: !state.loading
       };
     case SET_REFERENCE:
-      return{
+      return {
         ...state,
         reference: action.payload
       };
     case PAGE_REFERENCE:
-      return{
+      return {
         ...state,
         pageReference: action.payload
       };
@@ -71,7 +68,7 @@ export function reducer(state = initialState, action) {
       case GET_DETAILS:
         return {
           ...state,
-          gamesDetails: action.payload,
+          detailsLoaded: action.payload,
           loading: false
         };
       case POST_GAME: 
@@ -80,7 +77,6 @@ export function reducer(state = initialState, action) {
         return {
           ...state,
           gamesLoaded: action.payload,
-          gamesUnfiltered: action.payload,
           loading: false,
           pageReference: 0,
           reference: 'Owns'

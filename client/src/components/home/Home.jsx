@@ -12,7 +12,7 @@ import { getGames } from "../../redux/actions";
 const Home = () => {
     const dispatch = useDispatch();
     const reference = useSelector((state) => state.reference);
-    const gamesUnfiltered = useSelector((state) => state.gamesUnfiltered);
+    const gamesLoaded = useSelector((state) => state.gamesLoaded);
     const loading = useSelector((state) => state.loading);
     let title = reference === '' ? 'Find' : reference.charAt(0).toUpperCase() + reference.slice(1);
 
@@ -26,7 +26,7 @@ const Home = () => {
             <Div2><ToWhere to='/create' inner={'Do your own'} /></Div2>
             <SearchBar />
             {
-                gamesUnfiltered.length === 0 && reference === '' && !loading && (
+                gamesLoaded.length === 0 && reference === '' && !loading && (
                     <Start />
                 )
             }

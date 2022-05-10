@@ -31,7 +31,7 @@ const Menu = () => {
             }
             <Nav ref={reference} className={`menu ${bool && 'active'}`}>
                 <ul>
-                    <div className='resultsClear'><h3>Result: {games.length}</h3><Owns /></div>
+                    <div className='resultsClear'><h3>Result: {games.length}</h3>{games.length > 100 && <Owns />}</div>
                     <li>
                         <Sort 
                             innerLeft={'Desc'}

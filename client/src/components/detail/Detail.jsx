@@ -10,7 +10,7 @@ import "../css/details.css";
 const Detail = (props) => {
     const id = props.match.params.id;
     const dispatch = useDispatch();
-    const details = useSelector((state) => state.gamesDetails);
+    const details = useSelector((state) => state.detailsLoaded);
     const loading = useSelector((state) => state.loading);
     const { image, name, genres, description, released, rating, platforms } = details;
 
