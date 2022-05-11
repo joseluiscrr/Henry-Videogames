@@ -1,5 +1,5 @@
 import { filterGenre, sortName, sortRating } from "./constans"
-import { GET_GAMES, GET_QUERY, GET_GENRES, PAGE_REFERENCE, SET_LOADING, SET_REFERENCE, SORT_NAME, SORT_RATING, FILTER_GENRE, GET_DETAILS, POST_GAME, GET_BASE } from "./actions";
+import { GET_GAMES, GET_QUERY, GET_GENRES, PAGE_REFERENCE, SET_LOADING, SET_REFERENCE, SORT_NAME, SORT_RATING, FILTER_GENRE, GET_DETAILS, POST_GAME, GET_BASE, DELETE_GAME } from "./actions";
 
 let initialState = {
   gamesLoad: [],
@@ -84,8 +84,8 @@ export function reducer(state = initialState, action) {
           pageReference: 0,
           reference: 'Owns'
         };
-      // case DELETE_GAME: 
-      //   return {...state};
+      case DELETE_GAME: 
+        return {...state};
       default: return state;
   };
 };

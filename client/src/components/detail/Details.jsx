@@ -1,14 +1,17 @@
 import React from "react";
 import ToHome from "../from-to/ToHome";
 import Dynamic from "../styles/dynamic";
+import Template from "../from-to/Template";
 import styled from "styled-components";
 import "../css/details.css";
+import { deleteGame } from "../../redux/actions";
 
 const Details = ({ id, image, name, genres, description, released, rating, platforms }) => {
-    
-    return(
+    console.log(id);
+    return (
         <>
             <ToHome top='6%' inner='Go home' />
+            <Template action={deleteGame} inner={'Delete game'} arg={id}/>
             <Div className={'container'} image={image} >
                 <div className={'title'}>
                     <H1>{name}</H1>
@@ -41,7 +44,7 @@ const Details = ({ id, image, name, genres, description, released, rating, platf
 };
 
 const Div = styled.div`
-    background: linear-gradient(190deg, #000000eb 0%, #000000 100%), ${(props) => `url(${props.image})center/cover`};
+    background: linear-gradient(190deg, #00000085 0%, #000000 100%), ${(props) => `url(${props.image})center/cover`};
     margin: 0;
     width: 1366px;
     height: 625px;
@@ -68,7 +71,6 @@ const H1 = styled.h1`
 const Genres = styled.h4`
     margin: 0;
     position: absolute;
-    bottom: 13px;
     left: -5px;
     right: -250px;
     top: 100px;

@@ -1,6 +1,8 @@
 const axios = require("axios");
 const { Videogame, Genre } = require("../../db");
 const { API_KEY } = process.env;
+const Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 
 async function getApiGames() {
     let api1 = await axios.get(`https://api.rawg.io/api/games?key=${API_KEY}&page=1&page_size=40`);
@@ -48,9 +50,12 @@ async function allGames() {
 };
 
 async function apiQuery(name) {
+    let base = await Videogame.findAll({ where: {name: {[Op.iLike]: name}} });
     let api = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${API_KEY}&page_size=15`);
     let array = [];
-    if(api.data.results) {
+    if(base.length > 0) {
+        return base;
+    } else {
         api.data.results.map(r => {
             let obj = {
                 id: r.id,
