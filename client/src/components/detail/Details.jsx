@@ -7,11 +7,12 @@ import "../css/details.css";
 import { deleteGame } from "../../redux/actions";
 
 const Details = ({ id, image, name, genres, description, released, rating, platforms }) => {
-    console.log(id);
     return (
         <>
             <ToHome top='6%' inner='Go home' />
-            <Template action={deleteGame} inner={'Delete game'} arg={id}/>
+            {
+                id.length === 36 && <Div2><Template action={deleteGame} inner={'Delete game'} arg={id} /></Div2>
+            }
             <Div className={'container'} image={image} >
                 <div className={'title'}>
                     <H1>{name}</H1>
@@ -107,6 +108,12 @@ const Dynamic1 = styled(Dynamic)`
     align-items: center;
     justify-content: center;
     border-radius: 100px;
+`;
+
+const Div2 = styled.div`
+    position: absolute;
+    right: 205px;
+    top: 38px;
 `;
 
 export default Details;

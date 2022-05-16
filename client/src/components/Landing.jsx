@@ -33,6 +33,7 @@ const Buttons1 = styled(Buttons)`
   position: absolute;
   left: 140px;
   top: 180px;
+  border-radius: 100%;
   a { text-decoration: none; };
 `;
 

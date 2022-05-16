@@ -51,3 +51,8 @@
     top: 147px;
     bottom: 147px;
 }
+.delete{
+    position: absolute;
+    right: 205px;
+    top: 38px;
+}

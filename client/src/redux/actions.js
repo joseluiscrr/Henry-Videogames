@@ -124,8 +124,7 @@ export const getBase = () => {
 
 export const deleteGame = (payload) => {
     return async function(dispatch) {
-        var response = await axios.delete('http://localhost:3001/videogame/', payload);
-        console.log(response);
+        var response = await axios.delete('http://localhost:3001/videogame/' + payload);
         return dispatch({
             type: 'DELETE_GAME',
             payload: response
