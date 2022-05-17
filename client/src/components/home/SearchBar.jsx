@@ -10,9 +10,7 @@ const SearchBar = () => {
     const handleInput = (r) => { setInput(r.target.value) };
     const handleSubmit = async (r) => {
         r.preventDefault();
-        if(input === '') {
-            alert('No puedes dejar la searchbar vacía')
-        }
+        if(input === '') alert('You cannot leave this field empty');
         if(input !== '') {
             await dispatch(getQuery(input));
             dispatch(setReference(input));

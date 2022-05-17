@@ -79,8 +79,8 @@ const Genres = styled.h4`
     align-items: center;
     font-size: 20px;
     padding-left: 90px;
-    background: white;
-    color: black;
+    background: #0000005c;
+    color: white;
 `;
 
 const Descp = styled.h4`
@@ -94,7 +94,7 @@ const Descp = styled.h4`
 
 const Released = styled.h4`
     margin: 3px;
-    color: black;
+    color: white;
     margin-left: 12px;
 `;
 

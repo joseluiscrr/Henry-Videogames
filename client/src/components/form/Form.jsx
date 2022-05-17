@@ -15,7 +15,6 @@ const Form = () => {
     const [ danger, setDanger ] = useState(false);
     const [ submission, setSubmission ] = useState({ ...initialState });
     let genresList = {};
-    console.log(genresList);
     let platformsList = {};
 
     const handleSubmissionChange = (r) => {

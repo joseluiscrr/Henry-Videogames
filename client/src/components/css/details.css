@@ -13,10 +13,10 @@
     left: 120px;
     right: 832px;
     bottom: 35px;
-    background-color: white;
+    background-color: #0000005c;
     border-radius: 18px;
     overflow: auto;
-    color: black;
+    color: white;
 }
 .platforms{
     margin: 0;
@@ -25,7 +25,7 @@
     left: 589px;
     right: 113px;
     top: 477px;
-    background-color: white;
+    background-color: #0000005c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     text-align: center;
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    color: black;
+    color: white;
 }
 .points{
     margin: 0;
